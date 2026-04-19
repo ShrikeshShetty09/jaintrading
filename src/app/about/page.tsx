@@ -266,7 +266,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute -right-2 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4"
+                  className="absolute right-0 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4"
                 >
                   <div className="text-2xl sm:text-3xl font-bold text-primary-600">2019</div>
                   <div className="text-xs sm:text-sm text-gray-600">Established</div>
@@ -276,7 +276,7 @@ export default function AboutPage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.7 }}
-                  className="absolute -left-2 sm:-left-4 bottom-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4"
+                  className="absolute left-0 sm:-left-4 bottom-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4"
                 >
                   <div className="flex items-center gap-1 sm:gap-2 mb-1">
                     {[...Array(5)].map((_, i) => (

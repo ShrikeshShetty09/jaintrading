@@ -300,7 +300,7 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative mt-8 lg:mt-0"
+              className="relative mt-8 lg:mt-0 overflow-hidden"
             >
               <div className="relative w-full aspect-square max-w-sm mx-auto lg:max-w-lg">
                 {/* Decorative rings */}
@@ -332,7 +332,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.8 }}
-                  className="absolute -right-2 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3"
+                  className="absolute right-0 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3"
                 >
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-lg sm:rounded-xl flex items-center justify-center">
                     <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
@@ -347,7 +347,7 @@ export default function HomePage() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1 }}
-                  className="absolute -left-2 sm:-left-4 bottom-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4"
+                  className="absolute left-0 sm:-left-4 bottom-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4"
                 >
                   <div className="flex items-center gap-1 sm:gap-2 mb-1">
                     {[...Array(5)].map((_, i) => (
