@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import QueryWidget from '@/components/common/QueryWidget';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -16,7 +17,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: 'Jain Trading Company - Raw Herbs Supplier & Spices Wholesale from Neemuch',
-  description: 'Leading supplier of raw herbs, herbal raw materials, Ayurvedic raw materials, and spices from Neemuch - Asia\'s largest herbal market. 20+ years experience in wholesale herbs and spices. ISO, GMP, NPOP & NOP certified.',
+  description: 'Leading supplier of raw herbs, herbal raw materials, Ayurvedic raw materials, and spices from Neemuch - Asia\'s largest herbal market. 20+ years experience in wholesale herbs and spices.',
   keywords: [
     'raw herbs supplier',
     'herbal raw materials',
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Navbar />
         <main className="min-h-screen overflow-x-hidden">{children}</main>
         <Footer />
+        <QueryWidget />
       </body>
     </html>
   );

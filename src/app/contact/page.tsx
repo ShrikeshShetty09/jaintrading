@@ -16,6 +16,8 @@ import {
   Building,
   Users,
   Truck,
+  AlertCircle,
+  Loader2,
 } from 'lucide-react';
 
 const contactInfo = [
@@ -81,13 +83,45 @@ export default function ContactPage() {
     message: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    setIsLoading(true);
+    setError(null);
+
+    console.log('=== Contact Page Form Submitting ===');
+    console.log('Form Data:', formData);
+
+    try {
+      console.log('Calling API: /api/contact');
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log('API Response Status:', response.status);
+      const data = await response.json();
+      console.log('API Response Data:', data);
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      console.log('=== Form Submitted Successfully ===');
+      setIsSubmitted(true);
+      setTimeout(() => setIsSubmitted(false), 5000);
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    } catch (err) {
+      console.error('Form submission error:', err);
+      setError(err instanceof Error ? err.message : 'An unexpected error occurred');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -107,19 +141,19 @@ export default function ContactPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-primary-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/75 via-primary-800/65 to-primary-900/75" />
         </div>
 
         {/* Floating Elements */}
         <motion.div
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-secondary-500/20 rounded-full blur-3xl"
+          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-gold-400/25 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-primary-400/20 rounded-full blur-3xl"
+          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-champagne-400/20 rounded-full blur-3xl"
         />
 
         <div className="container-custom relative z-10 py-20">
@@ -133,14 +167,14 @@ export default function ContactPage() {
               variants={fadeInUp}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-5 py-2.5 rounded-full text-sm font-medium mb-8"
             >
-              <MessageSquare size={18} className="text-secondary-400" />
+              <MessageSquare size={18} className="text-gold-400" />
               <span>Get in Touch</span>
             </motion.div>
             <motion.h1
               variants={fadeInUp}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             >
-              Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-400 to-secondary-300">Us</span>
+              Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-secondary-300 to-gold-300">Us</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
@@ -154,26 +188,27 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
+      <section className="py-12 sm:py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden overflow-x-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-champagne-200 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
 
         <div className="container-custom relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-start">
             {/* Contact Form */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-100px' }}
               variants={fadeInLeft}
+              className="min-w-0"
             >
-              <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-4 border border-gold-200">
                 Send a Message
               </span>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Let&apos;s Start a <span className="text-primary-600">Conversation</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 break-words">
+                Let&apos;s Start a <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-primary-500">Conversation</span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 break-words">
                 Fill out the form below and we&apos;ll get back to you within 24 hours.
               </p>
 
@@ -181,26 +216,36 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-12 text-center"
+                  className="bg-gradient-to-br from-gold-50 to-champagne-50 rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-center border border-gold-200"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: 'spring' }}
-                    className="w-20 h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-6"
+                    className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-gold-400 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
                   >
-                    <CheckCircle className="w-10 h-10 text-white" />
+                    <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
                     Message Sent Successfully!
                   </h3>
-                  <p className="text-gray-600 text-lg">
-                    Thank you for contacting us. We&apos;ll get back to you soon.
+                  <p className="text-gray-600 text-base sm:text-lg">
+                    Thank you for contacting us. We&apos;ll get back to you within 24 hours.
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  {error && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center gap-3"
+                    >
+                      <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+                      <p className="text-red-700 text-sm">{error}</p>
+                    </motion.div>
+                  )}
+                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                         Full Name *
@@ -212,7 +257,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-lg"
+                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
                         placeholder="Your name"
                       />
                     </div>
@@ -227,13 +272,13 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-lg"
+                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
                         placeholder="your@email.com"
                       />
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                     <div>
                       <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
                         Phone Number
@@ -244,7 +289,7 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 transition-all outline-none text-lg"
+                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
                         placeholder="+91 XXXXX XXXXX"
                       />
                     </div>
@@ -258,7 +303,7 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 transition-all outline-none bg-white text-lg"
+                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none bg-white text-base sm:text-lg"
                       >
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
@@ -281,19 +326,29 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 transition-all outline-none resize-none text-lg"
+                      className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none resize-none text-base sm:text-lg"
                       placeholder="Tell us about your requirements..."
                     />
                   </div>
 
                   <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={{ scale: isLoading ? 1 : 1.02 }}
+                    whileTap={{ scale: isLoading ? 1 : 0.98 }}
                     type="submit"
-                    className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-bold rounded-2xl hover:from-primary-700 hover:to-primary-600 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 text-lg"
+                    disabled={isLoading}
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-gold-400 to-gold-500 text-gray-900 font-bold rounded-xl sm:rounded-2xl hover:from-gold-500 hover:to-gold-600 transition-all duration-300 shadow-lg shadow-gold-500/25 hover:shadow-xl hover:shadow-gold-500/30 text-base sm:text-lg disabled:opacity-70 disabled:cursor-not-allowed"
                   >
-                    Send Message
-                    <Send className="w-5 h-5" />
+                    {isLoading ? (
+                      <>
+                        Sending...
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send className="w-5 h-5" />
+                      </>
+                    )}
                   </motion.button>
                 </form>
               )}
@@ -305,14 +360,15 @@ export default function ContactPage() {
               whileInView="visible"
               viewport={{ once: true, margin: '-100px' }}
               variants={fadeInRight}
+              className="min-w-0"
             >
-              <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-4 border border-gold-200">
                 Contact Information
               </span>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 break-words">
                 Get in <span className="text-primary-600">Touch</span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 break-words">
                 We&apos;d love to hear from you. Here&apos;s how you can reach us.
               </p>
 
@@ -328,7 +384,7 @@ export default function ContactPage() {
                     key={index}
                     variants={fadeInUp}
                     whileHover={{ x: 10 }}
-                    className="group flex items-start gap-4 bg-gray-50 rounded-2xl p-5 hover:shadow-lg transition-all duration-300"
+                    className="group flex items-start gap-4 bg-white/80 backdrop-blur-sm border border-champagne-200 rounded-2xl p-5 hover:shadow-lg hover:shadow-gold-500/10 transition-all duration-300"
                   >
                     <div
                       className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
@@ -378,15 +434,15 @@ export default function ContactPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 bg-primary-900 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/choose.jpg"
             alt="Stats Background"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-10"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-900/95 to-primary-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/85 to-white/80" />
         </div>
 
         <div className="container-custom relative z-10">
@@ -396,13 +452,13 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm text-secondary-400 rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-6 border border-gold-200">
               Pan India Presence
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Dealers All Over <span className="text-secondary-400">India</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Dealers All Over <span className="text-primary-600">India</span>
             </h2>
-            <p className="text-xl text-primary-100 max-w-3xl mx-auto mb-12">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
               We supply our quality products across all regions of India. 
               Partner with us for the best quality herbs, superfoods, and spices.
             </p>
@@ -420,11 +476,11 @@ export default function ContactPage() {
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
+                  className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-champagne-200 hover:border-gold-300 hover:bg-white transition-all duration-300"
                 >
-                  <stat.icon className="w-8 h-8 text-secondary-400 mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-secondary-400 mb-2">{stat.value}</div>
-                  <div className="text-primary-200">{stat.label}</div>
+                  <stat.icon className="w-8 h-8 text-gold-600 mx-auto mb-4" />
+                  <div className="text-4xl font-bold text-gold-700 mb-2">{stat.value}</div>
+                  <div className="text-gray-700">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

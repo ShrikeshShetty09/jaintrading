@@ -99,19 +99,19 @@ export default function ProductsPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-primary-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/75 via-primary-800/65 to-primary-900/75" />
         </div>
 
         {/* Floating Elements */}
         <motion.div
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-secondary-500/20 rounded-full blur-3xl"
+          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-gold-400/25 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-primary-400/20 rounded-full blur-3xl"
+          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-champagne-400/20 rounded-full blur-3xl"
         />
 
         <div className="container-custom relative z-10 py-20">
@@ -121,18 +121,11 @@ export default function ProductsPage() {
             variants={staggerContainer}
             className="text-center max-w-4xl mx-auto"
           >
-            <motion.div
-              variants={fadeInUp}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-5 py-2.5 rounded-full text-sm font-medium mb-8"
-            >
-              <Shield size={18} className="text-secondary-400" />
-              <span>ISO, GMP, NPOP & NOP Certified</span>
-            </motion.div>
             <motion.h1
               variants={fadeInUp}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             >
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-400 to-secondary-300">Products</span>
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-secondary-300 to-gold-300">Products</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
@@ -146,9 +139,9 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Grid */}
-      <section className="py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
+      <section className="py-24 bg-gradient-to-b from-champagne-100/60 via-white to-gold-50/40 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-champagne-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
 
         <div className="container-custom relative z-10">
           <motion.div
@@ -166,7 +159,7 @@ export default function ProductsPage() {
                 className="group"
               >
                 <Link href={category.href} className="block h-full">
-                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
+                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-500 h-full flex flex-col border border-champagne-200 hover:border-gold-300">
                     {/* Image */}
                     <div className="relative h-64 overflow-hidden">
                       <Image
@@ -182,7 +175,7 @@ export default function ProductsPage() {
                     </div>
                     {/* Content */}
                     <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">
                         {category.name}
                       </h3>
                       <p className="text-gray-600 mb-4 flex-1 line-clamp-2">{category.description}</p>
@@ -199,7 +192,7 @@ export default function ProductsPage() {
                           </span>
                         ))}
                         {category.products.length > 3 && (
-                          <span className="text-xs px-3 py-1 rounded-full bg-gray-100 text-gray-600">
+                          <span className="text-xs px-3 py-1 rounded-full bg-primary-50 text-gray-600">
                             +{category.products.length - 3} more
                           </span>
                         )}
@@ -214,74 +207,6 @@ export default function ProductsPage() {
                 </Link>
               </motion.div>
             ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Quality Assurance Section */}
-      <section className="py-24 bg-primary-900 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/choose.jpg"
-            alt="Quality Background"
-            fill
-            className="object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-900/95 to-primary-900/80" />
-        </div>
-
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm text-secondary-400 rounded-full text-sm font-semibold mb-6">
-              Quality Assurance
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Certified <span className="text-secondary-400">Excellence</span>
-            </h2>
-            <p className="text-xl text-primary-100 leading-relaxed mb-12">
-              All our products undergo strict quality control measures. We are ISO, GMP, 
-              NPOP & NOP certified, ensuring the highest standards in every product we deliver.
-            </p>
-
-            {/* Certifications */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-              {['ISO', 'GMP', 'NPOP', 'NOP'].map((cert, index) => (
-                <motion.div
-                  key={index}
-                  whileHover={{ scale: 1.05, rotate: index % 2 === 0 ? 2 : -2 }}
-                  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 text-center hover:bg-white/15 transition-all duration-300"
-                >
-                  <div className="text-5xl font-bold text-secondary-400 mb-2">{cert}</div>
-                  <div className="text-primary-200">Certified</div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Features */}
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                '100% Natural Products',
-                'Direct from Farmers',
-                'Competitive Pricing',
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-center justify-center gap-3 text-white"
-                >
-                  <CheckCircle className="w-6 h-6 text-secondary-400" />
-                  <span className="text-lg">{feature}</span>
-                </motion.div>
-              ))}
-            </div>
           </motion.div>
         </div>
       </section>
@@ -313,7 +238,7 @@ export default function ProductsPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-secondary-500 text-gray-900 font-bold rounded-full hover:bg-secondary-400 transition-all duration-300 hover:shadow-lg hover:shadow-secondary-500/25 text-lg"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-gold-400 to-gold-500 text-gray-900 font-bold rounded-full hover:from-gold-500 hover:to-gold-600 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/25 text-lg"
               >
                 Get in Touch
                 <ArrowRight className="w-6 h-6" />

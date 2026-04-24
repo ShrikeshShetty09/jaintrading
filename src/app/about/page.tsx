@@ -27,8 +27,8 @@ const values = [
   },
   {
     icon: Award,
-    title: 'Certified Excellence',
-    description: 'ISO, GMP, NPOP & NOP certified company following industry best practices.',
+    title: 'Premium Standards',
+    description: 'Following industry best practices for manufacturing and supply.',
     color: '#eab308',
   },
   {
@@ -43,13 +43,6 @@ const values = [
     description: 'We believe in authentic products with best competitive rates.',
     color: '#ef4444',
   },
-];
-
-const certifications = [
-  { name: 'ISO', description: 'International Organization for Standardization' },
-  { name: 'GMP', description: 'Good Manufacturing Practice' },
-  { name: 'NPOP', description: 'National Programme for Organic Production' },
-  { name: 'NOP', description: 'National Organic Program' },
 ];
 
 const testimonials = [
@@ -127,14 +120,14 @@ export default function AboutPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-primary-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-gold-900/70 to-primary-900/80" />
         </div>
 
         {/* Floating Elements */}
         <motion.div
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-secondary-500/20 rounded-full blur-3xl"
+          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-gold-500/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
@@ -149,18 +142,11 @@ export default function AboutPage() {
             variants={staggerContainer}
             className="text-center max-w-4xl mx-auto"
           >
-            <motion.div
-              variants={fadeInUp}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-5 py-2.5 rounded-full text-sm font-medium mb-8"
-            >
-              <Shield size={18} className="text-secondary-400" />
-              <span>ISO, GMP, NPOP & NOP Certified</span>
-            </motion.div>
             <motion.h1
               variants={fadeInUp}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             >
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-400 to-secondary-300">Jain Trading</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-secondary-300 to-gold-300">Jain Trading Company</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
@@ -173,8 +159,8 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
+      <section className="py-24 bg-gradient-to-b from-champagne-100/60 via-white to-gold-50/40 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
 
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -184,11 +170,11 @@ export default function AboutPage() {
               viewport={{ once: true, margin: '-100px' }}
               variants={fadeInLeft}
             >
-              <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-6">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-6 border border-gold-200">
                 Our Story
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Leading Supplier of Raw <span className="text-primary-600">Herbs and Spices</span>
+                Leading Supplier of Raw <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-primary-500">Herbs and Spices</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed">
                 Jain Trading Company specializes in sourcing and supplying high-quality herbal products and spices. 
@@ -221,7 +207,7 @@ export default function AboutPage() {
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
-                    className="bg-gray-50 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300"
+                    className="bg-white/80 backdrop-blur-sm border border-champagne-200 rounded-2xl p-6 text-center hover:shadow-lg hover:shadow-gold-500/10 transition-all duration-300"
                   >
                     <item.icon className="w-6 h-6 text-primary-500 mx-auto mb-2" />
                     <div className="text-sm font-semibold text-gray-700">{item.label}</div>
@@ -266,9 +252,9 @@ export default function AboutPage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute right-0 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4"
+                  className="absolute right-0 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 border border-champagne-200"
                 >
-                  <div className="text-2xl sm:text-3xl font-bold text-primary-600">2019</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-gold-600">2019</div>
                   <div className="text-xs sm:text-sm text-gray-600">Established</div>
                 </motion.div>
 
@@ -280,7 +266,7 @@ export default function AboutPage() {
                 >
                   <div className="flex items-center gap-1 sm:gap-2 mb-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-secondary-400 text-secondary-400" />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-gold-400 text-gold-400" />
                     ))}
                   </div>
                   <div className="font-bold text-gray-900 text-sm sm:text-base">100+ Happy Clients</div>
@@ -292,15 +278,15 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 bg-primary-900 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/choose.jpg"
             alt="Mission Background"
             fill
-            className="object-cover opacity-20"
+            className="object-cover opacity-10"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-900 via-primary-900/95 to-primary-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/85 to-white/80" />
         </div>
 
         <div className="container-custom relative z-10">
@@ -310,13 +296,13 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm text-secondary-400 rounded-full text-sm font-semibold mb-6">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-6 border border-gold-200">
               Our Vision
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Clean, Safe & <span className="text-secondary-400">Natural</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Clean, Safe & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-gold-600">Natural</span>
             </h2>
-            <p className="text-xl text-primary-100 leading-relaxed mb-12">
+            <p className="text-xl text-gray-600 leading-relaxed mb-12">
               Provide clean, safe, and natural herbal materials to industries and retailers. 
               We are committed to delivering authentic raw herbs and spices with uncompromising quality standards.
             </p>
@@ -334,9 +320,9 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center justify-center gap-3 text-white"
+                  className="flex items-center justify-center gap-3 text-gray-800"
                 >
-                  <CheckCircle className="w-6 h-6 text-secondary-400" />
+                  <CheckCircle className="w-6 h-6 text-gold-600" />
                   <span className="text-lg">{feature}</span>
                 </motion.div>
               ))}
@@ -346,8 +332,8 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
+      <section className="py-24 bg-gradient-to-b from-champagne-100/60 via-white to-gold-50/40 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
 
         <div className="container-custom relative z-10">
           <motion.div
@@ -356,11 +342,11 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-4 border border-gold-200">
               Our Values
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500">Drives Us</span>
+              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-gold-600">Drives Us</span>
             </h2>
           </motion.div>
 
@@ -376,7 +362,7 @@ export default function AboutPage() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 text-center"
+                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-500 text-center border border-champagne-200 hover:border-gold-300"
               >
                 <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110"
@@ -396,52 +382,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section className="py-24 bg-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
-              Certifications
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Certified <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500">Excellence</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are proud to be certified by leading industry organizations, ensuring 
-              the highest quality standards.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-50px' }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                whileHover={{ scale: 1.05, rotate: index % 2 === 0 ? 2 : -2 }}
-                className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-8 text-center hover:shadow-xl transition-all duration-300"
-              >
-                <div className="text-5xl font-bold text-primary-600 mb-3">{cert.name}</div>
-                <p className="text-gray-600">{cert.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       {/* Testimonials Section */}
-      <section className="py-24 bg-gray-50 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary-100 rounded-full blur-3xl opacity-30" />
+      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-100 rounded-full blur-3xl opacity-30" />
 
         <div className="container-custom relative z-10">
           <motion.div
@@ -450,11 +393,11 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-4 border border-gold-200">
               Testimonials
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-500">Clients Say</span>
+              What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-gold-600">Clients Say</span>
             </h2>
           </motion.div>
 
@@ -470,19 +413,19 @@ export default function AboutPage() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 relative"
+                className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-500 relative border border-champagne-200 hover:border-gold-300"
               >
-                <Quote className="absolute top-6 right-6 w-10 h-10 text-primary-100" />
+                <Quote className="absolute top-6 right-6 w-10 h-10 text-gold-100" />
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-secondary-400 text-secondary-400" />
+                    <Star key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6 text-lg leading-relaxed italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-primary-100">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-gold-100">
                     <Image
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -528,7 +471,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-secondary-500 text-gray-900 font-bold rounded-full hover:bg-secondary-400 transition-all duration-300 hover:shadow-lg hover:shadow-secondary-500/25 text-lg"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-gold-400 to-gold-500 text-gray-900 font-bold rounded-full hover:from-gold-500 hover:to-gold-600 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/25 text-lg"
               >
                 Contact Us
                 <ArrowRight className="w-6 h-6" />

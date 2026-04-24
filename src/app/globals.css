@@ -18,12 +18,15 @@
     border-color: hsl(var(--border, 214.3 31.8% 91.4%));
   }
 
-  html {
-    @apply scroll-smooth overflow-x-hidden;
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    overflow-wrap: anywhere;
   }
 
   body {
-    @apply bg-white text-gray-900 antialiased overflow-x-hidden;
+    @apply bg-champagne-50 text-gray-900 antialiased;
   }
 }
 
@@ -34,10 +37,10 @@
 
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 
-           bg-primary-600 text-white font-medium rounded-lg
-           hover:bg-primary-700 transition-all duration-300
-           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
-           transform hover:scale-105 active:scale-95;
+           bg-gradient-to-r from-primary-600 via-gold-600 to-primary-500 text-white font-semibold rounded-lg
+           hover:from-primary-700 hover:via-gold-700 hover:to-primary-600 transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2
+           transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl hover:shadow-gold-500/25;
   }
 
   .btn-secondary {
@@ -57,7 +60,8 @@
 
   .card {
     @apply bg-white rounded-2xl shadow-lg hover:shadow-xl 
-           transition-all duration-300 overflow-hidden;
+           transition-all duration-300 overflow-hidden
+           border border-champagne-200 hover:border-gold-300;
   }
 
   .card-hover {
@@ -65,7 +69,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 via-primary-500 to-secondary-500 
+    @apply bg-gradient-to-r from-primary-600 via-gold-500 to-secondary-500 
            bg-clip-text text-transparent;
   }
 

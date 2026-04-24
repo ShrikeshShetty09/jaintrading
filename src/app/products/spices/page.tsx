@@ -92,7 +92,7 @@ export default function SpicesPage() {
       </section>
 
       {/* Products Grid */}
-      <section className="py-24 bg-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-orange-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
 
@@ -109,7 +109,7 @@ export default function SpicesPage() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -8 }}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100"
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-500 border border-champagne-200 hover:border-gold-300"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -160,7 +160,7 @@ export default function SpicesPage() {
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl hover:shadow-gold-500/10 transition-all duration-300 border border-champagne-200 hover:border-gold-300"
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-7 h-7 text-white" />
