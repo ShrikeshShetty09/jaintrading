@@ -182,20 +182,18 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section - Full Screen with Parallax */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
+      <section ref={heroRef} className="relative min-h-[500px] sm:min-h-screen flex items-center overflow-hidden">
         {/* Animated Background */}
-        <motion.div style={{ y: heroY }} className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-emerald-900/70 to-primary-900/80" />
+        <motion.div style={{ y: heroY }} className="absolute inset-0 bg-black">
           <div className="absolute inset-0 opacity-20">
             <Image
-              src="/images/family.jpg"
+              src="/images/hero_bg/hero-bg.jpg"
               alt="Background"
               fill
-              className="object-cover"
+              className="object-cover object-center"
               priority
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-primary-900/30" />
         </motion.div>
 
         {/* Floating Elements */}
@@ -225,17 +223,20 @@ export default function HomePage() {
         />
 
         {/* Content */}
-        <div className="container-custom relative z-10 py-20">
+        <div className="container-custom relative z-10 py-12 sm:py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
-              className="text-white"
+              className="text-white text-center lg:text-left"
             >
               <motion.h1
                 variants={fadeInUp}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+                className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+                style={{ 
+                  textShadow: '0 4px 15px rgba(0,0,0,0.9), 0 0 30px rgba(200,155,60,0.6), 0 0 50px rgba(200,155,60,0.3)' 
+                }}
               >
                 <span className="text-white">Jain</span>
                 <br />
@@ -244,13 +245,13 @@ export default function HomePage() {
 
               <motion.p
                 variants={fadeInUp}
-                className="text-xl md:text-2xl text-primary-100 mb-8 leading-relaxed max-w-xl"
+                className="text-lg md:text-2xl text-primary-100 mb-8 leading-relaxed max-w-xl"
               >
                 Committed to Quality, Committed to Customers. Premium herbs, superfoods, 
                 spices, and oil seeds from the heart of India.
               </motion.p>
 
-              <motion.div variants={fadeInUp} className="flex flex-wrap gap-3 sm:gap-4 mb-12">
+              <motion.div variants={fadeInUp} className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-12">
                 <Link
                   href="/products"
                   className="group inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-emerald-500 text-white font-semibold rounded-full hover:bg-emerald-600 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25 text-sm sm:text-base"
@@ -288,12 +289,12 @@ export default function HomePage() {
               </motion.div>
             </motion.div>
 
-            {/* Hero Image */}
+            {/* Hero Image - Hidden on Mobile to show more background */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="relative mt-8 lg:mt-0 overflow-hidden"
+              className="hidden lg:block relative mt-8 lg:mt-0 overflow-hidden"
             >
               <div className="relative w-full aspect-square max-w-sm mx-auto lg:max-w-lg">
                 {/* Decorative rings */}

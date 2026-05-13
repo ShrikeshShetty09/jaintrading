@@ -45,6 +45,41 @@ const values = [
   },
 ];
 
+const productCategories = [
+  {
+    name: 'Super Foods',
+    description: 'Nutrient-rich seeds like Chia, Flax, and Quinoa.',
+    href: '/products/superfoods',
+    image: '/images/superfoods.jpg',
+    color: '#556B2F',
+    icon: Sparkles,
+  },
+  {
+    name: 'Herbs',
+    description: 'Premium natural herbs for Ayurvedic wellness.',
+    href: '/products/herbs',
+    image: '/images/herbs.jpg',
+    color: '#445826',
+    icon: Leaf,
+  },
+  {
+    name: 'Spices',
+    description: 'Authentic Indian spices for rich flavor.',
+    href: '/products/spices',
+    image: '/images/spices.jpg',
+    color: '#059669',
+    icon: Star,
+  },
+  {
+    name: 'Oil Seeds',
+    description: 'High-quality seeds for oil extraction.',
+    href: '/products/oil-seeds',
+    image: '/images/oil-seeds.jpg',
+    color: '#047857',
+    icon: Award,
+  },
+];
+
 const testimonials = [
   {
     name: 'Charvi',
@@ -146,7 +181,7 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             >
-              About <span className="text-gold-600">Jain Trading Company</span>
+              Welcome to <span className="text-gold-600">Jain Trading Company</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
@@ -154,6 +189,113 @@ export default function AboutPage() {
             >
               Trusted Supplier of Raw Herbs, Super Foods, Spices and Oil Seeds from Neemuch Mandi
             </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Products Section */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Background Decorations */}
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary-900/5 to-transparent" />
+        <div className="absolute top-1/4 -right-24 w-96 h-96 bg-emerald-50 rounded-full blur-3xl opacity-60" />
+        <div className="absolute bottom-1/4 -left-24 w-96 h-96 bg-primary-50 rounded-full blur-3xl opacity-60" />
+
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-100px' }}
+            variants={staggerContainer}
+            className="text-center max-w-3xl mx-auto mb-16"
+          >
+            <motion.span
+              variants={fadeInUp}
+              className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-6 border border-emerald-200"
+            >
+              Our Products
+            </motion.span>
+            <motion.h2
+              variants={fadeInUp}
+              className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+            >
+              Premium Range of <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-emerald-500 to-emerald-600">Natural Products</span>
+            </motion.h2>
+            <motion.p
+              variants={fadeInUp}
+              className="text-lg text-gray-600"
+            >
+              We take pride in sourcing and supplying the finest quality herbs, superfoods, 
+              spices and oil seeds directly from the heart of India&apos;s agricultural hubs.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-50px' }}
+            variants={staggerContainer}
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {productCategories.map((category, index) => (
+              <motion.div
+                key={index}
+                variants={fadeInUp}
+                whileHover={{ y: -10 }}
+                className="group"
+              >
+                <Link href={category.href} className="block h-full">
+                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 h-full flex flex-col border border-mint-100 hover:border-emerald-300">
+                    {/* Image Container */}
+                    <div className="relative h-48 overflow-hidden">
+                      <Image
+                        src={category.image}
+                        alt={category.name}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                      <div 
+                        className="absolute bottom-4 left-4 p-2 rounded-xl backdrop-blur-md bg-white/20 border border-white/30"
+                      >
+                        <category.icon className="w-6 h-6 text-white" />
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-6 flex-1 flex flex-col">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                        {category.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4 flex-1">
+                        {category.description}
+                      </p>
+                      <div 
+                        className="flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all"
+                        style={{ color: category.color }}
+                      >
+                        <span>Explore Category</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 text-center"
+          >
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white font-bold rounded-full hover:bg-primary-700 transition-all duration-300 hover:shadow-lg hover:shadow-primary-600/25"
+            >
+              View Full Product Catalog
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </motion.div>
         </div>
       </section>
