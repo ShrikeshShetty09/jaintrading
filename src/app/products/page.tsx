@@ -48,7 +48,7 @@ const productCategories = [
     description: 'Pure herbal powders for easy consumption and maximum potency, processed with care.',
     icon: Zap,
     href: '/products/herbal-powders',
-    color: '#C89B3C',
+    color: '#10b981',
     image: '/images/powders.jpg',
     products: ['Ashwagandha Powder', 'Amla Powder', 'Giloy Powder', 'Moringa Powder', 'Shatavari Powder'],
   },
@@ -57,7 +57,7 @@ const productCategories = [
     description: 'Authentic Indian spices for rich flavor and aromatic cooking, sourced directly from farms.',
     icon: Star,
     href: '/products/spices',
-    color: '#b08430',
+    color: '#059669',
     image: '/images/spices.jpg',
     products: ['Turmeric', 'Cumin', 'Black Pepper', 'Cardamom', 'Cinnamon', 'Cloves', 'Dry Ginger'],
   },
@@ -66,7 +66,7 @@ const productCategories = [
     description: 'High-quality oil seeds for extraction and culinary purposes, meeting international standards.',
     icon: Award,
     href: '/products/oil-seeds',
-    color: '#8f6a23',
+    color: '#047857',
     image: '/images/oil-seeds.jpg',
     products: ['Mustard Seeds', 'Sesame Seeds', 'Sunflower Seeds', 'Flax Seeds', 'Safflower Seeds'],
   },
@@ -106,12 +106,12 @@ export default function ProductsPage() {
         <motion.div
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-gold-400/25 rounded-full blur-3xl"
+          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-emerald-400/25 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-champagne-400/20 rounded-full blur-3xl"
+          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-mint-400/20 rounded-full blur-3xl"
         />
 
         <div className="container-custom relative z-10 py-20">
@@ -125,7 +125,7 @@ export default function ProductsPage() {
               variants={fadeInUp}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             >
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-secondary-300 to-gold-300">Products</span>
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-sage-300 to-emerald-300">Products</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
@@ -139,9 +139,9 @@ export default function ProductsPage() {
       </section>
 
       {/* Products Grid */}
-      <section className="py-24 bg-gradient-to-b from-champagne-100/60 via-white to-gold-50/40 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-champagne-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
+      <section className="py-24 bg-gradient-to-b from-mint-100/60 via-white to-emerald-50/40 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-mint-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
 
         <div className="container-custom relative z-10">
           <motion.div
@@ -159,7 +159,7 @@ export default function ProductsPage() {
                 className="group"
               >
                 <Link href={category.href} className="block h-full">
-                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-500 h-full flex flex-col border border-champagne-200 hover:border-gold-300">
+                  <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 h-full flex flex-col border border-mint-200 hover:border-emerald-300">
                     {/* Image */}
                     <div className="relative h-64 overflow-hidden">
                       <Image
@@ -175,7 +175,7 @@ export default function ProductsPage() {
                     </div>
                     {/* Content */}
                     <div className="p-6 flex-1 flex flex-col">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-gold-600 transition-colors">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
                         {category.name}
                       </h3>
                       <p className="text-gray-600 mb-4 flex-1 line-clamp-2">{category.description}</p>
@@ -238,7 +238,7 @@ export default function ProductsPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-gold-400 to-gold-500 text-gray-900 font-bold rounded-full hover:from-gold-500 hover:to-gold-600 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/25 text-lg"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-emerald-500 text-white font-bold rounded-full hover:bg-emerald-600 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25 text-lg"
               >
                 Get in Touch
                 <ArrowRight className="w-6 h-6" />
@@ -256,3 +256,4 @@ export default function ProductsPage() {
     </>
   );
 }
+

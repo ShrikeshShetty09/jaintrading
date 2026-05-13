@@ -4,18 +4,18 @@
 
 @layer base {
   :root {
-    --background: 60 33% 98%;
+    --background: 140 20% 98%;
     --foreground: 0 0% 17%;
     --primary: 82 41% 30%;
-    --primary-foreground: 60 33% 98%;
-    --secondary: 37 43% 93%;
-    --secondary-foreground: 0 0% 17%;
-    --earth: 37 25% 55%;
-    --earth-foreground: 60 33% 98%;
+    --primary-foreground: 140 20% 98%;
+    --secondary: 140 20% 93%;
+    --sage-foreground: 0 0% 17%;
+    --earth: 160 30% 40%;
+    --moss-foreground: 140 20% 98%;
   }
 
   * {
-    border-color: hsl(var(--border, 37 30% 86%));
+    border-color: hsl(var(--border, 140 20% 86%));
   }
 
   html,
@@ -26,7 +26,7 @@
   }
 
   body {
-    background-color: #FAF9F6;
+    background-color: #f1f5f2;
     color: #2B2B2B;
     @apply antialiased;
   }
@@ -39,17 +39,17 @@
 
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 
-           bg-gradient-to-r from-primary-600 via-gold-600 to-primary-500 text-white font-semibold rounded-lg
-           hover:from-primary-700 hover:via-gold-700 hover:to-primary-600 transition-all duration-300
-           focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2
-           transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl hover:shadow-gold-500/25;
+           bg-primary-600 text-white font-semibold rounded-lg
+           hover:bg-primary-700 transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2
+           transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl hover:shadow-primary-500/25;
   }
 
   .btn-secondary {
     @apply inline-flex items-center justify-center px-6 py-3 
-           bg-secondary-500 text-gray-900 font-medium rounded-lg
-           hover:bg-secondary-600 transition-all duration-300
-           focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2
+           bg-emerald-500 text-white font-medium rounded-lg
+           hover:bg-emerald-600 transition-all duration-300
+           focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2
            transform hover:scale-105 active:scale-95;
   }
 
@@ -63,7 +63,7 @@
   .card {
     @apply bg-white rounded-2xl shadow-lg hover:shadow-xl 
            transition-all duration-300 overflow-hidden
-           border border-champagne-200 hover:border-gold-300;
+           border border-mint-200 hover:border-emerald-300;
   }
 
   .card-hover {
@@ -71,7 +71,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 via-gold-500 to-primary-700 
+    @apply bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-700 
            bg-clip-text text-transparent;
   }
 
@@ -112,20 +112,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5EFE3;
+  background: #e3eae5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C89B3C;
+  background: #10b981;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b08430;
+  background: #059669;
 }
 
 /* Selection color */
 ::selection {
-  background-color: #C89B3C;
+  background-color: #10b981;
   color: white;
 }
+

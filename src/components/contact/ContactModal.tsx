@@ -58,11 +58,11 @@ export default function ContactModal({
               exit={{ opacity: 0, y: 20, scale: 0.98 }}
               transition={{ duration: 0.2 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-champagne-200"
+              className="w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-mint-200"
             >
-              <div className="p-5 sm:p-6 border-b border-champagne-200 flex items-start justify-between gap-4">
+              <div className="p-5 sm:p-6 border-b border-mint-200 flex items-start justify-between gap-4">
                 <div className="min-w-0">
-                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-3 border border-gold-200">
+                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-3 border border-emerald-200">
                     {title}
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 break-words">
@@ -74,7 +74,7 @@ export default function ContactModal({
                 <button
                   type="button"
                   onClick={onClose}
-                  className="shrink-0 w-10 h-10 rounded-xl border border-champagne-200 flex items-center justify-center text-gray-600 hover:bg-gold-50 hover:border-gold-300"
+                  className="shrink-0 w-10 h-10 rounded-xl border border-mint-200 flex items-center justify-center text-gray-600 hover:bg-emerald-50 hover:border-emerald-300"
                   aria-label="Close"
                 >
                   <X className="w-5 h-5" />
@@ -91,3 +91,4 @@ export default function ContactModal({
     </AnimatePresence>
   );
 }
+

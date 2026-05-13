@@ -17,9 +17,9 @@ const navigation = [
       { name: 'Super Foods', href: '/products/superfoods', color: '#556B2F' },
       { name: 'Herbs', href: '/products/herbs', color: '#445826' },
       { name: 'Herbal Seeds', href: '/products/herbal-seeds', color: '#6b8c2a' },
-      { name: 'Herbal Powders', href: '/products/herbal-powders', color: '#C89B3C' },
-      { name: 'Spices', href: '/products/spices', color: '#b08430' },
-      { name: 'Oil Seeds', href: '/products/oil-seeds', color: '#8f6a23' },
+      { name: 'Herbal Powders', href: '/products/herbal-powders', color: '#10b981' },
+      { name: 'Spices', href: '/products/spices', color: '#059669' },
+      { name: 'Oil Seeds', href: '/products/oil-seeds', color: '#047857' },
     ],
   },
 ];
@@ -52,7 +52,7 @@ export default function Navbar() {
               <motion.a
                 href="tel:07440744060"
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-2 hover:text-secondary-300 transition-colors"
+                className="flex items-center gap-2 hover:text-sage-300 transition-colors"
               >
                 <Phone size={14} />
                 <span>074407 44060</span>
@@ -60,14 +60,14 @@ export default function Navbar() {
               <motion.a
                 href="mailto:jaintradingcomapany1996@gmail.com"
                 whileHover={{ scale: 1.02 }}
-                className="flex items-center gap-2 hover:text-secondary-300 transition-colors"
+                className="flex items-center gap-2 hover:text-sage-300 transition-colors"
               >
                 <Mail size={14} />
                 <span>jaintradingcomapany1996@gmail.com</span>
               </motion.a>
             </div>
             <div className="flex items-center gap-2 text-primary-200">
-              <MapPin size={14} className="text-gold-400" />
+              <MapPin size={14} className="text-emerald-400" />
               <span>Neemuch, Madhya Pradesh</span>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function Navbar() {
                     href={item.href}
                     className={cn(
                       'px-5 py-2.5 text-gray-700 font-medium rounded-xl transition-all duration-300',
-                      'hover:text-gold-600 hover:bg-gold-50',
+                      'hover:text-emerald-600 hover:bg-emerald-50',
                       'flex items-center gap-1.5 relative group'
                     )}
                   >
@@ -137,7 +137,7 @@ export default function Navbar() {
                         )}
                       />
                     )}
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gold-500 rounded-full group-hover:w-3/4 transition-all duration-300" />
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-emerald-500 rounded-full group-hover:w-3/4 transition-all duration-300" />
                   </Link>
 
                   {/* Dropdown Menu */}
@@ -161,22 +161,22 @@ export default function Navbar() {
                               >
                                 <Link
                                   href={child.href}
-                                  className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-gold-50 rounded-xl transition-all duration-200 group"
+                                  className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:bg-emerald-50 rounded-xl transition-all duration-200 group"
                                 >
                                   <div
                                     className="w-3 h-3 rounded-full"
                                     style={{ backgroundColor: (child as any).color }}
                                   />
-                                  <span className="group-hover:text-gold-600 transition-colors">{child.name}</span>
-                                  <ArrowRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity text-gold-500" />
+                                  <span className="group-hover:text-emerald-600 transition-colors">{child.name}</span>
+                                  <ArrowRight className="w-4 h-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity text-emerald-500" />
                                 </Link>
                               </motion.div>
                             ))}
                           </div>
-                          <div className="p-3 bg-gradient-to-r from-gold-50 to-champagne-50 border-t border-champagne-200">
+                          <div className="p-3 bg-gradient-to-r from-emerald-50 to-mint-50 border-t border-mint-200">
                             <Link
                               href="/products"
-                              className="flex items-center justify-center gap-2 text-sm font-semibold text-gold-600 hover:text-gold-700 transition-colors"
+                              className="flex items-center justify-center gap-2 text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
                             >
                               View All Products
                               <ArrowRight className="w-4 h-4" />
@@ -195,7 +195,7 @@ export default function Navbar() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-600 via-gold-600 to-primary-500 text-white font-semibold rounded-xl hover:from-primary-700 hover:via-gold-700 hover:to-primary-600 transition-all duration-300 shadow-lg shadow-gold-500/25 hover:shadow-xl hover:shadow-gold-500/30"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30"
                 >
                   Get in Touch
                   <ArrowRight className="w-4 h-4" />
@@ -207,7 +207,7 @@ export default function Navbar() {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2.5 rounded-xl hover:bg-gold-50 transition-colors"
+              className="lg:hidden p-2.5 rounded-xl hover:bg-emerald-50 transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </motion.button>
@@ -222,7 +222,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-champagne-200 overflow-hidden"
+              className="lg:hidden bg-white/95 backdrop-blur-xl border-t border-mint-200 overflow-hidden"
             >
               <div className="container-custom py-6">
                 {navigation.map((item, index) => (
@@ -236,7 +236,7 @@ export default function Navbar() {
                       <div>
                         <button
                           onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
-                          className="flex items-center justify-between w-full py-3 text-lg font-medium text-gray-700 hover:text-gold-600 transition-colors"
+                          className="flex items-center justify-between w-full py-3 text-lg font-medium text-gray-700 hover:text-emerald-600 transition-colors"
                         >
                           {item.name}
                           <ChevronDown
@@ -255,7 +255,7 @@ export default function Navbar() {
                               transition={{ duration: 0.2 }}
                               className="overflow-hidden"
                             >
-                              <div className="pl-4 pb-3 space-y-1 border-l-2 border-gold-300 ml-2">
+                              <div className="pl-4 pb-3 space-y-1 border-l-2 border-emerald-300 ml-2">
                                 {item.children.map((child) => (
                                   <Link
                                     key={child.name}
@@ -264,7 +264,7 @@ export default function Navbar() {
                                       setIsOpen(false);
                                       setActiveDropdown(null);
                                     }}
-                                    className="flex items-center gap-2 py-2 text-gray-600 hover:text-gold-600 transition-colors"
+                                    className="flex items-center gap-2 py-2 text-gray-600 hover:text-emerald-600 transition-colors"
                                   >
                                     <div
                                       className="w-2.5 h-2.5 rounded-full"
@@ -279,7 +279,7 @@ export default function Navbar() {
                                     setIsOpen(false);
                                     setActiveDropdown(null);
                                   }}
-                                  className="flex items-center gap-2 py-2 text-gold-600 font-semibold hover:text-gold-700 transition-colors"
+                                  className="flex items-center gap-2 py-2 text-emerald-600 font-semibold hover:text-emerald-700 transition-colors"
                                 >
                                   <ArrowRight className="w-4 h-4" />
                                   View All Products
@@ -305,7 +305,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="pt-6 mt-6 border-t border-champagne-200"
+                  className="pt-6 mt-6 border-t border-mint-200"
                 >
                   <Link
                     href="/contact"
@@ -323,3 +323,4 @@ export default function Navbar() {
     </>
   );
 }
+

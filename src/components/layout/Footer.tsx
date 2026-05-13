@@ -9,8 +9,8 @@ const quickLinks = [
   { name: 'Super Foods', href: '/products/superfoods', color: '#556B2F' },
   { name: 'Herbs', href: '/products/herbs', color: '#445826' },
   { name: 'Herbal Seeds', href: '/products/herbal-seeds', color: '#6b8c2a' },
-  { name: 'Spices', href: '/products/spices', color: '#b08430' },
-  { name: 'Oil Seeds', href: '/products/oil-seeds', color: '#8f6a23' },
+  { name: 'Spices', href: '/products/spices', color: '#10b981' },
+  { name: 'Oil Seeds', href: '/products/oil-seeds', color: '#059669' },
 ];
 
 const companyLinks = [
@@ -22,11 +22,11 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-champagne-100 via-white to-gold-50 text-gray-900 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-mint-100 via-white to-emerald-50 text-gray-900 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold-400/15 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-champagne-300/15 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-400/15 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-mint-300/15 rounded-full blur-3xl" />
 
       {/* Main Footer */}
       <div className="container-custom relative z-10 py-20">
@@ -63,7 +63,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <span className="w-8 h-1 bg-gradient-to-r from-gold-400 to-gold-500 rounded-full" />
+              <span className="w-8 h-1 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full" />
               Products
             </h3>
             <ul className="space-y-3">
@@ -94,7 +94,7 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <span className="w-8 h-1 bg-gradient-to-r from-gold-400 to-gold-500 rounded-full" />
+              <span className="w-8 h-1 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full" />
               Company
             </h3>
             <ul className="space-y-3">
@@ -121,7 +121,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
-              <span className="w-8 h-1 bg-gradient-to-r from-gold-400 to-gold-500 rounded-full" />
+              <span className="w-8 h-1 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full" />
               Contact Us
             </h3>
             <ul className="space-y-4">
@@ -165,7 +165,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-champagne-200 relative z-10">
+      <div className="border-t border-mint-200 relative z-10">
         <div className="container-custom py-6">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
             <p className="text-gray-500 text-sm">
@@ -177,7 +177,7 @@ export default function Footer() {
                 href="https://www.shridevfreelance.online/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gold-600 hover:text-gold-700 transition-colors font-medium"
+                className="text-emerald-600 hover:text-emerald-700 transition-colors font-medium"
               >
                 ShriDev Freelance
               </a>
@@ -188,3 +188,4 @@ export default function Footer() {
     </footer>
   );
 }
+

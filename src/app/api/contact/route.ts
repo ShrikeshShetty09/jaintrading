@@ -60,10 +60,10 @@ export async function POST(request: NextRequest) {
                 
                 <!-- Header -->
                 <tr>
-                  <td style="background: linear-gradient(135deg, #065f46 0%, #d4a574 50%, #065f46 100%); padding: 40px 30px; text-align: center;">
+                  <td style="background: linear-gradient(135deg, #065f46 0%, #10b981 50%, #065f46 100%); padding: 40px 30px; text-align: center;">
                     <img src="https://jaintrading.vercel.app/images/logo/jaintraderslogo.png" alt="Jain Trading Company Logo" style="width: 80px; height: 80px; margin-bottom: 20px; border-radius: 50%; background: white; padding: 10px;" />
-                    <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700;">Jain Trading Company</h1>
-                    <p style="margin: 10px 0 0 0; color: #fef3c7; font-size: 14px; letter-spacing: 2px;">PREMIUM HERBS & SPICES</p>
+                    <h1 style="margin: 0; color: #D4AF37; font-size: 28px; font-weight: 700;">Jain Trading Company</h1>
+                    <p style="margin: 10px 0 0 0; color: #d1fae5; font-size: 14px; letter-spacing: 2px;">PREMIUM HERBS & SPICES</p>
                   </td>
                 </tr>
 
@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
                     <p style="margin: 0 0 30px 0; color: #6b7280; font-size: 16px;">You have received a new inquiry from your website.</p>
                     
                     <!-- Contact Details -->
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #fdfbf7; border-radius: 12px; border: 1px solid #e5e1d8;">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f1f5f2; border-radius: 12px; border: 1px solid #e3eae5;">
                       <tr>
                         <td style="padding: 20px;">
                           <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
                               <td style="padding: 12px 0; border-bottom: 1px solid #e5e1d8;">
                                 <span style="color: #9ca3af; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Email</span>
                                 <p style="margin: 5px 0 0 0;">
-                                  <a href="mailto:${email}" style="color: #d4a574; font-size: 16px; text-decoration: none;">${email}</a>
+                                  <a href="mailto:${email}" style="color: #10b981; font-size: 16px; text-decoration: none;">${email}</a>
                                 </p>
                               </td>
                             </tr>
@@ -97,7 +97,7 @@ export async function POST(request: NextRequest) {
                               <td style="padding: 12px 0; border-bottom: 1px solid #e5e1d8;">
                                 <span style="color: #9ca3af; font-size: 12px; text-transform: uppercase; letter-spacing: 1px;">Phone</span>
                                 <p style="margin: 5px 0 0 0;">
-                                  <a href="tel:${phone}" style="color: #d4a574; font-size: 16px; text-decoration: none;">${phone}</a>
+                                  <a href="tel:${phone}" style="color: #10b981; font-size: 16px; text-decoration: none;">${phone}</a>
                                 </p>
                               </td>
                             </tr>
@@ -123,7 +123,7 @@ export async function POST(request: NextRequest) {
                     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 30px;">
                       <tr>
                         <td style="text-align: center;">
-                          <a href="mailto:${email}" style="display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #d4a574 0%, #b8956a 100%); color: #1f2937; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 14px; margin-right: 10px;">Reply to ${name}</a>
+                          <a href="mailto:${email}" style="display: inline-block; padding: 14px 28px; background-color: #10b981; color: #ffffff; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 14px; margin-right: 10px;">Reply to ${name}</a>
                           <a href="tel:${phone || ''}" style="display: inline-block; padding: 14px 28px; background-color: #065f46; color: #ffffff; text-decoration: none; border-radius: 50px; font-weight: 600; font-size: 14px;">Call Now</a>
                         </td>
                       </tr>
@@ -133,8 +133,8 @@ export async function POST(request: NextRequest) {
 
                 <!-- Footer -->
                 <tr>
-                  <td style="background-color: #fdfbf7; padding: 30px; text-align: center; border-top: 1px solid #e5e1d8;">
-                    <p style="margin: 0 0 5px 0; color: #6b7280; font-size: 14px;">Jain Trading Company</p>
+                  <td style="background-color: #f1f5f2; padding: 30px; text-align: center; border-top: 1px solid #e3eae5;">
+                    <p style="margin: 0 0 5px 0; color: #D4AF37; font-size: 14px; font-weight: 600;">Jain Trading Company</p>
                     <p style="margin: 0 0 5px 0; color: #9ca3af; font-size: 12px;">Bunglow Behind Roadways, Bus Stand, Jaroli Trade Center</p>
                     <p style="margin: 0 0 10px 0; color: #9ca3af; font-size: 12px;">Maharana Pratap Marg, Neemuch, MP 458441</p>
                     <p style="margin: 0; color: #9ca3af; font-size: 11px;">© ${new Date().getFullYear()} Jain Trading Company. All rights reserved.</p>
@@ -210,3 +210,4 @@ export async function POST(request: NextRequest) {
     );
   }
 }
+

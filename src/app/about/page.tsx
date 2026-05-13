@@ -120,14 +120,14 @@ export default function AboutPage() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-gold-900/70 to-primary-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-emerald-900/70 to-primary-900/80" />
         </div>
 
         {/* Floating Elements */}
         <motion.div
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-gold-500/20 rounded-full blur-3xl"
+          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-emerald-500/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
@@ -146,7 +146,7 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             >
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-secondary-300 to-gold-300">Jain Trading Company</span>
+              About <span className="text-gold-600">Jain Trading Company</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
@@ -159,8 +159,8 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-24 bg-gradient-to-b from-champagne-100/60 via-white to-gold-50/40 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
+      <section className="py-24 bg-gradient-to-b from-mint-100/60 via-white to-emerald-50/40 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
 
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -170,11 +170,11 @@ export default function AboutPage() {
               viewport={{ once: true, margin: '-100px' }}
               variants={fadeInLeft}
             >
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-6 border border-gold-200">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-6 border border-emerald-200">
                 Our Story
               </span>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Leading Supplier of Raw <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-primary-500">Herbs and Spices</span>
+                Leading Supplier of Raw <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-500">Herbs and Spices</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed">
                 Jain Trading Company, established in 2021, is a trusted and accredited supplier providing a wide range of raw herbs, super foods, spices, and oil seeds.
@@ -204,7 +204,7 @@ export default function AboutPage() {
                     transition={{ delay: index * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
-                    className="bg-white/80 backdrop-blur-sm border border-champagne-200 rounded-2xl p-6 text-center hover:shadow-lg hover:shadow-gold-500/10 transition-all duration-300"
+                    className="bg-white/80 backdrop-blur-sm border border-mint-200 rounded-2xl p-6 text-center hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300"
                   >
                     <item.icon className="w-6 h-6 text-primary-500 mx-auto mb-2" />
                     <div className="text-sm font-semibold text-gray-700">{item.label}</div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
                 <motion.div
                   animate={{ rotate: -360 }}
                   transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
-                  className="absolute inset-4 border-2 border-dashed border-secondary-200 rounded-full"
+                  className="absolute inset-4 border-2 border-dashed border-sage-200 rounded-full"
                 />
 
                 {/* Main Image */}
@@ -249,9 +249,9 @@ export default function AboutPage() {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="absolute right-0 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 border border-champagne-200"
+                  className="absolute right-0 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 border border-mint-200"
                 >
-                  <div className="text-2xl sm:text-3xl font-bold text-gold-600">2021</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-emerald-600">2021</div>
                   <div className="text-xs sm:text-sm text-gray-600">Established</div>
                 </motion.div>
 
@@ -263,7 +263,7 @@ export default function AboutPage() {
                 >
                   <div className="flex items-center gap-1 sm:gap-2 mb-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-gold-400 text-gold-400" />
+                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-emerald-400 text-emerald-400" />
                     ))}
                   </div>
                   <div className="font-bold text-gray-900 text-sm sm:text-base">100+ Happy Clients</div>
@@ -275,7 +275,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-sage-50/40 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/choose.jpg"
@@ -293,11 +293,11 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center max-w-4xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-6 border border-gold-200">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-6 border border-emerald-200">
               Our Vision
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Clean, Safe & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-gold-600">Natural</span>
+              Clean, Safe & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-emerald-500 to-emerald-600">Natural</span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-12">
               We are committed to exceeding customer expectations by providing top-quality products at the lowest prices. 
@@ -319,7 +319,7 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                   className="flex items-center justify-center gap-3 text-gray-800"
                 >
-                  <CheckCircle className="w-6 h-6 text-gold-600" />
+                  <CheckCircle className="w-6 h-6 text-emerald-600" />
                   <span className="text-lg">{feature}</span>
                 </motion.div>
               ))}
@@ -329,8 +329,8 @@ export default function AboutPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-24 bg-gradient-to-b from-champagne-100/60 via-white to-gold-50/40 relative overflow-hidden">
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
+      <section className="py-24 bg-gradient-to-b from-mint-100/60 via-white to-emerald-50/40 relative overflow-hidden">
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
 
         <div className="container-custom relative z-10">
           <motion.div
@@ -339,11 +339,11 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-4 border border-gold-200">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-4 border border-emerald-200">
               Our Values
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-gold-600">Drives Us</span>
+              What <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-emerald-500 to-emerald-600">Drives Us</span>
             </h2>
           </motion.div>
 
@@ -359,7 +359,7 @@ export default function AboutPage() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -10, scale: 1.02 }}
-                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-500 text-center border border-champagne-200 hover:border-gold-300"
+                className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 text-center border border-mint-200 hover:border-emerald-300"
               >
                 <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 transition-transform duration-300 group-hover:scale-110"
@@ -380,8 +380,8 @@ export default function AboutPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold-100 rounded-full blur-3xl opacity-30" />
+      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-sage-50/40 relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-100 rounded-full blur-3xl opacity-30" />
 
         <div className="container-custom relative z-10">
           <motion.div
@@ -390,11 +390,11 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-4 border border-gold-200">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-4 border border-emerald-200">
               Testimonials
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-gold-600">Clients Say</span>
+              What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-emerald-600">Clients Say</span>
             </h2>
           </motion.div>
 
@@ -410,19 +410,19 @@ export default function AboutPage() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -10 }}
-                className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-500 relative border border-champagne-200 hover:border-gold-300"
+                className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 relative border border-mint-200 hover:border-emerald-300"
               >
-                <Quote className="absolute top-6 right-6 w-10 h-10 text-gold-100" />
+                <Quote className="absolute top-6 right-6 w-10 h-10 text-emerald-100" />
                 <div className="flex gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-gold-400 text-gold-400" />
+                    <Star key={i} className="w-5 h-5 fill-emerald-400 text-emerald-400" />
                   ))}
                 </div>
                 <p className="text-gray-600 mb-6 text-lg leading-relaxed italic">
                   &ldquo;{testimonial.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-gold-100">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden ring-4 ring-emerald-100">
                     <Image
                       src={testimonial.image}
                       alt={testimonial.name}
@@ -468,7 +468,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-gradient-to-r from-gold-400 to-gold-500 text-gray-900 font-bold rounded-full hover:from-gold-500 hover:to-gold-600 transition-all duration-300 hover:shadow-lg hover:shadow-gold-500/25 text-lg"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-emerald-500 text-white font-bold rounded-full hover:bg-emerald-600 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25 text-lg"
               >
                 Contact Us
                 <ArrowRight className="w-6 h-6" />
@@ -486,3 +486,4 @@ export default function AboutPage() {
     </>
   );
 }
+

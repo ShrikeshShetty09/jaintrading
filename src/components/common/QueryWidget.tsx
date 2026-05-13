@@ -42,7 +42,7 @@ export default function QueryWidget() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:shadow-xl hover:shadow-green-500/40 transition-all"
+              className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:shadow-xl hover:shadow-green-500/40 transition-all"
               title="Chat on WhatsApp"
             >
               <WhatsAppIcon className="w-7 h-7 text-white" />
@@ -53,10 +53,10 @@ export default function QueryWidget() {
               href={mailtoUrl}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              className="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-500 rounded-full flex items-center justify-center shadow-lg shadow-gold-500/30 hover:shadow-xl hover:shadow-gold-500/40 transition-all"
+              className="w-14 h-14 bg-emerald-500 rounded-full flex items-center justify-center shadow-lg shadow-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/40 transition-all"
               title="Send Email"
             >
-              <Mail className="w-6 h-6 text-gray-900" />
+              <Mail className="w-6 h-6 text-white" />
             </motion.a>
           </motion.div>
         )}
@@ -70,7 +70,7 @@ export default function QueryWidget() {
         className={`w-16 h-16 rounded-full flex items-center justify-center shadow-xl transition-all duration-300 ${
           isOpen
             ? 'bg-gray-800 shadow-gray-800/30'
-            : 'bg-gradient-to-br from-primary-600 to-primary-500 shadow-primary-500/30 hover:shadow-primary-500/40'
+            : 'bg-primary-600 shadow-primary-500/30 hover:shadow-primary-500/40'
         }`}
         title="Contact Us"
       >
@@ -105,12 +105,13 @@ export default function QueryWidget() {
           initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5 }}
-          className="absolute right-20 top-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-lg border border-champagne-200 whitespace-nowrap"
+          className="absolute right-20 top-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-lg border border-mint-200 whitespace-nowrap"
         >
           <span className="text-sm font-medium text-gray-700">Need Help?</span>
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-2 h-2 bg-white border-r border-b border-champagne-200 rotate-45" />
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-2 h-2 bg-white border-r border-b border-mint-200 rotate-45" />
         </motion.div>
       )}
     </div>
   );
 }
+

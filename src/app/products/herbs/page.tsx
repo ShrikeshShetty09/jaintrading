@@ -63,12 +63,12 @@ export default function HerbsPage() {
         <motion.div
           animate={{ y: [0, -15, 0], rotate: [0, 3, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-72 sm:h-72 bg-gold-400/20 rounded-full blur-3xl"
+          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-72 sm:h-72 bg-emerald-400/20 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 15, 0], rotate: [0, -3, 0] }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-96 sm:h-96 bg-champagne-400/20 rounded-full blur-3xl"
+          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-96 sm:h-96 bg-mint-400/20 rounded-full blur-3xl"
         />
 
         <div className="container-custom relative z-10 py-20">
@@ -82,14 +82,14 @@ export default function HerbsPage() {
               variants={fadeInUp}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-5 py-2.5 rounded-full text-sm font-medium mb-8"
             >
-              <Leaf size={18} className="text-gold-300" />
+              <Leaf size={18} className="text-emerald-300" />
               <span>Natural Wellness</span>
             </motion.div>
             <motion.h1
               variants={fadeInUp}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             >
-              Natural <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 to-champagne-300">Herbs</span>
+              Natural <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-mint-300">Herbs</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
@@ -103,9 +103,9 @@ export default function HerbsPage() {
       </section>
 
       {/* Products Grid */}
-      <section className="py-24 bg-gradient-to-b from-champagne-100/60 via-white to-gold-50/40 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-champagne-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
+      <section className="py-24 bg-gradient-to-b from-mint-100/60 via-white to-emerald-50/40 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-mint-100 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
 
         <div className="container-custom relative z-10">
           <motion.div
@@ -120,7 +120,7 @@ export default function HerbsPage() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ y: -8 }}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-gold-500/10 transition-all duration-500 border border-champagne-200 hover:border-gold-300"
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 border border-mint-200 hover:border-emerald-300"
               >
                 <div className="relative h-48 overflow-hidden">
                   <Image
@@ -145,7 +145,7 @@ export default function HerbsPage() {
       </section>
 
       {/* Features */}
-      <section className="py-24 bg-gradient-to-br from-champagne-100/60 via-white to-gold-50/40 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-mint-100/60 via-white to-emerald-50/40 relative overflow-hidden">
         <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -171,7 +171,7 @@ export default function HerbsPage() {
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -5 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl hover:shadow-gold-500/10 transition-all duration-300 border border-champagne-200 hover:border-gold-300"
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300 border border-mint-200 hover:border-emerald-300"
               >
                 <div className="w-14 h-14 bg-gradient-to-br from-primary-600 to-primary-700 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-7 h-7 text-white" />
@@ -208,7 +208,7 @@ export default function HerbsPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-gold-400 to-gold-500 text-gray-900 font-bold rounded-full hover:from-gold-500 hover:to-gold-600 transition-all duration-300 shadow-lg text-lg"
+                className="inline-flex items-center gap-2 px-10 py-4 bg-gradient-to-r from-emerald-400 to-emerald-500 text-gray-900 font-bold rounded-full hover:from-emerald-500 hover:to-emerald-600 transition-all duration-300 shadow-lg text-lg"
               >
                 Contact Us
                 <ArrowRight className="w-5 h-5" />
@@ -226,3 +226,4 @@ export default function HerbsPage() {
     </>
   );
 }
+

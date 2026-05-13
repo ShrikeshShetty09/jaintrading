@@ -33,7 +33,7 @@ const contactInfo = [
     title: 'Call Us',
     content: '074407 44060',
     link: 'tel:07440744060',
-    color: '#C89B3C',
+    color: '#10b981',
   },
   {
     icon: Mail,
@@ -47,7 +47,7 @@ const contactInfo = [
     title: 'Working Hours',
     content: 'Mon - Sat: 9:00 AM - 6:00 PM',
     link: null,
-    color: '#b08430',
+    color: '#059669',
   },
 ];
 
@@ -148,12 +148,12 @@ export default function ContactPage() {
         <motion.div
           animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-gold-400/25 rounded-full blur-3xl"
+          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-emerald-400/25 rounded-full blur-3xl"
         />
         <motion.div
           animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-champagne-400/20 rounded-full blur-3xl"
+          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-mint-400/20 rounded-full blur-3xl"
         />
 
         <div className="container-custom relative z-10 py-20">
@@ -167,14 +167,14 @@ export default function ContactPage() {
               variants={fadeInUp}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-5 py-2.5 rounded-full text-sm font-medium mb-8"
             >
-              <MessageSquare size={18} className="text-gold-400" />
+              <MessageSquare size={18} className="text-emerald-400" />
               <span>Get in Touch</span>
             </motion.div>
             <motion.h1
               variants={fadeInUp}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
             >
-              Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-secondary-300 to-gold-300">Us</span>
+              Contact <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-sage-300 to-emerald-300">Us</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
@@ -188,9 +188,9 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-12 sm:py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden overflow-x-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-gold-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-champagne-200 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
+      <section className="py-12 sm:py-24 bg-gradient-to-b from-primary-50/40 via-white to-sage-50/40 relative overflow-hidden overflow-x-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-100 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-mint-200 rounded-full blur-3xl opacity-50 translate-y-1/2 -translate-x-1/2" />
 
         <div className="container-custom relative z-10">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-start">
@@ -202,11 +202,11 @@ export default function ContactPage() {
               variants={fadeInLeft}
               className="min-w-0"
             >
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-4 border border-gold-200">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-4 border border-emerald-200">
                 Send a Message
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 break-words">
-                Let&apos;s Start a <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-primary-500">Conversation</span>
+                Let&apos;s Start a <span className="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-500">Conversation</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8 break-words">
                 Fill out the form below and we&apos;ll get back to you within 24 hours.
@@ -216,13 +216,13 @@ export default function ContactPage() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="bg-gradient-to-br from-gold-50 to-champagne-50 rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-center border border-gold-200"
+                  className="bg-gradient-to-br from-emerald-50 to-mint-50 rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-center border border-emerald-200"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: 'spring' }}
-                    className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-gold-400 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
+                    className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
                   >
                     <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
                   </motion.div>
@@ -239,10 +239,10 @@ export default function ContactPage() {
                     <motion.div
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center gap-3"
+                      className="bg-primary-50 border border-primary-200 rounded-xl p-4 flex items-center gap-3"
                     >
-                      <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-                      <p className="text-red-700 text-sm">{error}</p>
+                      <AlertCircle className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                      <p className="text-primary-900 text-sm">{error}</p>
                     </motion.div>
                   )}
                   <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
@@ -257,7 +257,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
+                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none text-base sm:text-lg"
                         placeholder="Your name"
                       />
                     </div>
@@ -272,7 +272,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
+                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none text-base sm:text-lg"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -289,7 +289,7 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
+                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none text-base sm:text-lg"
                         placeholder="+91 XXXXX XXXXX"
                       />
                     </div>
@@ -303,7 +303,7 @@ export default function ContactPage() {
                         value={formData.subject}
                         onChange={handleChange}
                         required
-                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none bg-white text-base sm:text-lg"
+                        className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none bg-white text-base sm:text-lg"
                       >
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
@@ -326,7 +326,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none resize-none text-base sm:text-lg"
+                      className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none resize-none text-base sm:text-lg"
                       placeholder="Tell us about your requirements..."
                     />
                   </div>
@@ -336,7 +336,7 @@ export default function ContactPage() {
                     whileTap={{ scale: isLoading ? 1 : 0.98 }}
                     type="submit"
                     disabled={isLoading}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-gold-400 to-gold-500 text-gray-900 font-bold rounded-xl sm:rounded-2xl hover:from-gold-500 hover:to-gold-600 transition-all duration-300 shadow-lg shadow-gold-500/25 hover:shadow-xl hover:shadow-gold-500/30 text-base sm:text-lg disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3 sm:py-4 bg-emerald-500 text-white font-bold rounded-xl sm:rounded-2xl hover:bg-emerald-600 transition-all duration-300 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 text-base sm:text-lg disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isLoading ? (
                       <>
@@ -362,7 +362,7 @@ export default function ContactPage() {
               variants={fadeInRight}
               className="min-w-0"
             >
-              <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-4 border border-gold-200">
+              <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-4 border border-emerald-200">
                 Contact Information
               </span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 break-words">
@@ -384,7 +384,7 @@ export default function ContactPage() {
                     key={index}
                     variants={fadeInUp}
                     whileHover={{ x: 10 }}
-                    className="group flex items-start gap-4 bg-white/80 backdrop-blur-sm border border-champagne-200 rounded-2xl p-5 hover:shadow-lg hover:shadow-gold-500/10 transition-all duration-300"
+                    className="group flex items-start gap-4 bg-white/80 backdrop-blur-sm border border-mint-200 rounded-2xl p-5 hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300"
                   >
                     <div
                       className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110"
@@ -434,7 +434,7 @@ export default function ContactPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-secondary-50/40 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-b from-primary-50/40 via-white to-sage-50/40 relative overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/choose.jpg"
@@ -452,7 +452,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-gold-100 to-champagne-100 text-gold-800 rounded-full text-sm font-semibold mb-6 border border-gold-200">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-emerald-100 to-mint-100 text-emerald-800 rounded-full text-sm font-semibold mb-6 border border-emerald-200">
               Pan India Presence
             </span>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -476,10 +476,10 @@ export default function ContactPage() {
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-champagne-200 hover:border-gold-300 hover:bg-white transition-all duration-300"
+                  className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-mint-200 hover:border-emerald-300 hover:bg-white transition-all duration-300"
                 >
-                  <stat.icon className="w-8 h-8 text-gold-600 mx-auto mb-4" />
-                  <div className="text-4xl font-bold text-gold-700 mb-2">{stat.value}</div>
+                  <stat.icon className="w-8 h-8 text-emerald-600 mx-auto mb-4" />
+                  <div className="text-4xl font-bold text-emerald-700 mb-2">{stat.value}</div>
                   <div className="text-gray-700">{stat.label}</div>
                 </motion.div>
               ))}
@@ -490,3 +490,4 @@ export default function ContactPage() {
     </>
   );
 }
+

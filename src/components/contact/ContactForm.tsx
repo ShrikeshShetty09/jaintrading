@@ -78,13 +78,13 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-gradient-to-br from-gold-50 to-champagne-50 rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-center border border-gold-200"
+        className="bg-gradient-to-br from-emerald-50 to-mint-50 rounded-2xl sm:rounded-3xl p-6 sm:p-12 text-center border border-emerald-200"
       >
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0.2, type: 'spring' }}
-          className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-gold-400 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
+          className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-emerald-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6"
         >
           <CheckCircle className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
         </motion.div>
@@ -104,10 +104,10 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center gap-3"
+          className="bg-primary-50 border border-primary-200 rounded-xl p-4 flex items-center gap-3"
         >
-          <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
-          <p className="text-red-700 text-sm">{error}</p>
+          <AlertCircle className="w-5 h-5 text-primary-600 flex-shrink-0" />
+          <p className="text-primary-900 text-sm">{error}</p>
         </motion.div>
       )}
       <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
@@ -122,7 +122,7 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
+            className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none text-base sm:text-lg"
             placeholder="Your name"
           />
         </div>
@@ -137,7 +137,7 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
+            className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none text-base sm:text-lg"
             placeholder="your@email.com"
           />
         </div>
@@ -154,7 +154,7 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none text-base sm:text-lg"
+            className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none text-base sm:text-lg"
             placeholder="+91 XXXXX XXXXX"
           />
         </div>
@@ -168,7 +168,7 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
             value={formData.subject}
             onChange={handleChange}
             required
-            className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none bg-white text-base sm:text-lg"
+            className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none bg-white text-base sm:text-lg"
           >
             <option value="">Select a subject</option>
             <option value="general">General Inquiry</option>
@@ -191,7 +191,7 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
           onChange={handleChange}
           required
           rows={5}
-          className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-champagne-200 focus:border-gold-500 focus:ring-2 sm:focus:ring-4 focus:ring-gold-100 transition-all outline-none resize-none text-base sm:text-lg"
+          className="w-full px-3 sm:px-5 py-3 sm:py-4 rounded-xl sm:rounded-2xl border-2 border-mint-200 focus:border-emerald-500 focus:ring-2 sm:focus:ring-4 focus:ring-emerald-100 transition-all outline-none resize-none text-base sm:text-lg"
           placeholder="Tell us about your requirements..."
         />
       </div>
@@ -201,7 +201,7 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
         whileTap={{ scale: isLoading ? 1 : 0.98 }}
         type="submit"
         disabled={isLoading}
-        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3 sm:py-4 bg-gradient-to-r from-gold-400 to-gold-500 text-gray-900 font-bold rounded-xl sm:rounded-2xl hover:from-gold-500 hover:to-gold-600 transition-all duration-300 shadow-lg shadow-gold-500/25 hover:shadow-xl hover:shadow-gold-500/30 text-base sm:text-lg disabled:opacity-70 disabled:cursor-not-allowed"
+        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-10 py-3 sm:py-4 bg-emerald-500 text-white font-bold rounded-xl sm:rounded-2xl hover:bg-emerald-600 transition-all duration-300 shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:shadow-emerald-500/30 text-base sm:text-lg disabled:opacity-70 disabled:cursor-not-allowed"
       >
         {isLoading ? (
           <>
@@ -218,3 +218,4 @@ export default function ContactForm({ onSubmitted }: ContactFormProps) {
     </form>
   );
 }
+
