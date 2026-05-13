@@ -185,7 +185,7 @@ export default function HomePage() {
       <section ref={heroRef} className="relative min-h-[500px] sm:min-h-screen flex items-center overflow-hidden">
         {/* Animated Background */}
         <motion.div style={{ y: heroY }} className="absolute inset-0 bg-black">
-          <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 opacity-30">
             <Image
               src="/images/hero_bg/hero-bg.jpg"
               alt="Background"
