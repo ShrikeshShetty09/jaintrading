@@ -30,7 +30,7 @@ const products = [
     description: 'Nutrient-rich superfoods including Chia Seeds, Flax Seeds, Quinoa, and more for optimal health.',
     icon: Sparkles,
     href: '/products/superfoods',
-    color: '#22c55e',
+    color: '#556B2F',
     image: '/images/superfoods.jpg',
     items: ['Chia Seeds', 'Flax Seeds', 'Quinoa', 'Pumpkin Seeds'],
   },
@@ -39,7 +39,7 @@ const products = [
     description: 'Premium quality natural herbs for Ayurvedic wellness and holistic health solutions.',
     icon: Leaf,
     href: '/products/herbs',
-    color: '#10b981',
+    color: '#445826',
     image: '/images/herbs.jpg',
     items: ['Ashwagandha', 'Amla', 'Giloy', 'Tulsi'],
   },
@@ -48,7 +48,7 @@ const products = [
     description: 'Medicinal herbal seeds for cultivation and therapeutic applications.',
     icon: Heart,
     href: '/products/herbal-seeds',
-    color: '#14b8a6',
+    color: '#6b8c2a',
     image: '/images/seeds.jpg',
     items: ['Basil Seeds', 'Neem Seeds', 'Safflower Seeds'],
   },
@@ -57,7 +57,7 @@ const products = [
     description: 'Pure herbal powders for easy consumption and maximum potency.',
     icon: Zap,
     href: '/products/herbal-powders',
-    color: '#06b6d4',
+    color: '#C89B3C',
     image: '/images/powders.jpg',
     items: ['Ashwagandha Powder', 'Amla Powder', 'Moringa Powder'],
   },
@@ -66,7 +66,7 @@ const products = [
     description: 'Authentic Indian spices for rich flavor and aromatic cooking.',
     icon: Star,
     href: '/products/spices',
-    color: '#f97316',
+    color: '#b08430',
     image: '/images/spices.jpg',
     items: ['Turmeric', 'Cumin', 'Black Pepper', 'Cardamom'],
   },
@@ -75,7 +75,7 @@ const products = [
     description: 'High-quality oil seeds for extraction and culinary purposes.',
     icon: Award,
     href: '/products/oil-seeds',
-    color: '#eab308',
+    color: '#8f6a23',
     image: '/images/oil-seeds.jpg',
     items: ['Mustard Seeds', 'Sesame Seeds', 'Sunflower Seeds'],
   },
@@ -86,25 +86,25 @@ const features = [
     icon: Shield,
     title: 'Quality Assurance',
     description: 'Highly committed to Quality Assurance in every product we deliver.',
-    color: '#22c55e',
+    color: '#556B2F',
   },
   {
     icon: Award,
     title: 'Premium Quality',
     description: 'Industry-leading practices for manufacturing, storage, and supply.',
-    color: '#eab308',
+    color: '#C89B3C',
   },
   {
     icon: Truck,
     title: 'Pan India Delivery',
     description: 'Reliable delivery network covering all regions across India.',
-    color: '#3b82f6',
+    color: '#445826',
   },
   {
     icon: Heart,
     title: 'Customer First',
-    description: 'Dedicated to quality and customer satisfaction since 2019.',
-    color: '#ef4444',
+    description: 'Dedicated to quality and customer satisfaction since 2021.',
+    color: '#b08430',
   },
 ];
 
@@ -537,8 +537,8 @@ export default function HomePage() {
                 Trusted Partner for <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-primary-500">Quality Products</span>
               </h2>
               <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                Established in 2019 by Mr. Ayush Mehta, Jain Trading Company has grown to become 
-                a trusted name in the herbs and superfoods industry.
+                Established in 2021, Jain Trading Company has grown to become 
+                a trusted and accredited supplier in the herbs and superfoods industry.
               </p>
               <p className="text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
                 Our mission is simple: supply the best quality products to our customers 

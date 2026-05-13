@@ -6,11 +6,11 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, ArrowRight } from 'lucide-react';
 
 const quickLinks = [
-  { name: 'Super Foods', href: '/products/superfoods', color: '#22c55e' },
-  { name: 'Herbs', href: '/products/herbs', color: '#10b981' },
-  { name: 'Herbal Seeds', href: '/products/herbal-seeds', color: '#14b8a6' },
-  { name: 'Spices', href: '/products/spices', color: '#f97316' },
-  { name: 'Oil Seeds', href: '/products/oil-seeds', color: '#eab308' },
+  { name: 'Super Foods', href: '/products/superfoods', color: '#556B2F' },
+  { name: 'Herbs', href: '/products/herbs', color: '#445826' },
+  { name: 'Herbal Seeds', href: '/products/herbal-seeds', color: '#6b8c2a' },
+  { name: 'Spices', href: '/products/spices', color: '#b08430' },
+  { name: 'Oil Seeds', href: '/products/oil-seeds', color: '#8f6a23' },
 ];
 
 const companyLinks = [
@@ -47,15 +47,15 @@ export default function Footer() {
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold bg-gradient-to-r from-primary-700 via-gold-600 to-primary-500 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold text-gold-600">
                   Jain Trading
                 </span>
-                <span className="text-xs bg-gradient-to-r from-gold-600 to-primary-500 bg-clip-text text-transparent -mt-1 tracking-wider">COMPANY</span>
+                <span className="text-xs text-gold-600 -mt-1 tracking-wider">COMPANY</span>
               </div>
             </Link>
             <p className="text-gray-600 mb-6 leading-relaxed">
               Manufacturer and trader of premium herbs, 
-              superfoods, spices, and oil seeds. Committed to quality since 2019.
+              superfoods, spices, and oil seeds. Committed to quality since 2021.
             </p>
 
           </div>

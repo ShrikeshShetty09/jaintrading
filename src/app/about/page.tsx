@@ -23,25 +23,25 @@ const values = [
     icon: Shield,
     title: 'Quality Assurance',
     description: 'Highly committed to Quality Assurance in every product we deliver.',
-    color: '#22c55e',
+    color: '#556B2F',
   },
   {
     icon: Award,
     title: 'Premium Standards',
     description: 'Following industry best practices for manufacturing and supply.',
-    color: '#eab308',
+    color: '#C89B3C',
   },
   {
     icon: Users,
     title: 'Customer Focus',
     description: 'Our mission is to supply the best quality product to our customers.',
-    color: '#3b82f6',
+    color: '#445826',
   },
   {
     icon: Target,
     title: 'Integrity',
     description: 'We believe in authentic products with best competitive rates.',
-    color: '#ef4444',
+    color: '#b08430',
   },
 ];
 
@@ -77,7 +77,7 @@ const testimonials = [
 ];
 
 const stats = [
-  { value: '20+', label: 'Years Experience', icon: Award },
+  { value: '5+', label: 'Years Experience', icon: Award },
   { value: '50+', label: 'Products Range', icon: Sparkles },
   { value: '100+', label: 'Happy Clients', icon: Heart },
   { value: 'Pan India', label: 'Delivery Network', icon: Truck },
@@ -152,7 +152,7 @@ export default function AboutPage() {
               variants={fadeInUp}
               className="text-lg sm:text-xl md:text-2xl text-primary-100 leading-relaxed"
             >
-              Leading Supplier of Raw Herbs and Spices from Neemuch - Asia&apos;s Largest Herbal Market
+              Trusted Supplier of Raw Herbs, Super Foods, Spices and Oil Seeds from Neemuch Mandi
             </motion.p>
           </motion.div>
         </div>
@@ -177,25 +177,22 @@ export default function AboutPage() {
                 Leading Supplier of Raw <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-primary-500">Herbs and Spices</span>
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed">
-                Jain Trading Company specializes in sourcing and supplying high-quality herbal products and spices. 
-                Our product range includes herbal fruits, herbal leaves, herbal roots, herbal seeds, 
-                and conventional herbal products.
+                Jain Trading Company, established in 2021, is a trusted and accredited supplier providing a wide range of raw herbs, super foods, spices, and oil seeds.
+                Our products are sourced directly from farmers at the Neemuch market (Mandi Yard), allowing us to supply the best quality possible at very competitive prices.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                We source our products from Neemuch, one of Asia&apos;s largest markets for raw herbs and spices, 
-                where thousands of farmers from Rajasthan and Madhya Pradesh bring their produce to the mandi. 
-                By procuring directly from farmers, we ensure authentic quality and competitive pricing.
+                Our company&apos;s strength lies in our ability to deliver top-quality products at the lowest prices within the specified time. 
+                As a quality-focused organization, we are committed to exceeding customer expectations and maintaining the highest standards.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                With more than two decades of experience in sourcing and networking within the herbal industry, 
-                we supply raw materials to companies involved in Ayurvedic medicines, herbal products, and spices. 
-                Our materials are processed with strict quality standards to maintain purity and natural properties.
+                We prioritize maintaining the highest standard of quality products under hygienic conditions, with each product being rigorously tested for quality. 
+                With our dedicated services, we are emerging as the most dependable business partner in the herbal industry.
               </p>
 
               {/* Strengths */}
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: '20+ Years Experience', icon: Award },
+                  { label: '5+ Years Experience', icon: Award },
                   { label: 'Direct Sourcing from Farmers', icon: Truck },
                   { label: 'Competitive Pricing', icon: Sparkles },
                   { label: 'Bulk Supply Capability', icon: Heart },
@@ -254,7 +251,7 @@ export default function AboutPage() {
                   transition={{ delay: 0.5 }}
                   className="absolute right-0 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 border border-champagne-200"
                 >
-                  <div className="text-2xl sm:text-3xl font-bold text-gold-600">2019</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-gold-600">2021</div>
                   <div className="text-xs sm:text-sm text-gray-600">Established</div>
                 </motion.div>
 
@@ -303,8 +300,8 @@ export default function AboutPage() {
               Clean, Safe & <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-gold-500 to-gold-600">Natural</span>
             </h2>
             <p className="text-xl text-gray-600 leading-relaxed mb-12">
-              Provide clean, safe, and natural herbal materials to industries and retailers. 
-              We are committed to delivering authentic raw herbs and spices with uncompromising quality standards.
+              We are committed to exceeding customer expectations by providing top-quality products at the lowest prices. 
+              Our products are processed under hygienic conditions and rigorously tested for quality to ensure the highest standards for our partners.
             </p>
 
             {/* Features */}

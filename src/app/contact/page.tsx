@@ -26,28 +26,28 @@ const contactInfo = [
     title: 'Visit Us',
     content: 'Bunglow Behind Roadways, Bus Stand, Jaroli Trade Center, Maharana Pratap Marg, Neemuch, MP 458441',
     link: null,
-    color: '#ef4444',
+    color: '#556B2F',
   },
   {
     icon: Phone,
     title: 'Call Us',
     content: '074407 44060',
     link: 'tel:07440744060',
-    color: '#22c55e',
+    color: '#C89B3C',
   },
   {
     icon: Mail,
     title: 'Email Us',
     content: 'jaintradingcomapany1996@gmail.com',
     link: 'mailto:jaintradingcomapany1996@gmail.com',
-    color: '#3b82f6',
+    color: '#445826',
   },
   {
     icon: Clock,
     title: 'Working Hours',
     content: 'Mon - Sat: 9:00 AM - 6:00 PM',
     link: null,
-    color: '#eab308',
+    color: '#b08430',
   },
 ];
 

@@ -14,12 +14,12 @@ const navigation = [
     name: 'Products',
     href: '/products',
     children: [
-      { name: 'Super Foods', href: '/products/superfoods', color: '#22c55e' },
-      { name: 'Herbs', href: '/products/herbs', color: '#10b981' },
-      { name: 'Herbal Seeds', href: '/products/herbal-seeds', color: '#14b8a6' },
-      { name: 'Herbal Powders', href: '/products/herbal-powders', color: '#06b6d4' },
-      { name: 'Spices', href: '/products/spices', color: '#f97316' },
-      { name: 'Oil Seeds', href: '/products/oil-seeds', color: '#eab308' },
+      { name: 'Super Foods', href: '/products/superfoods', color: '#556B2F' },
+      { name: 'Herbs', href: '/products/herbs', color: '#445826' },
+      { name: 'Herbal Seeds', href: '/products/herbal-seeds', color: '#6b8c2a' },
+      { name: 'Herbal Powders', href: '/products/herbal-powders', color: '#C89B3C' },
+      { name: 'Spices', href: '/products/spices', color: '#b08430' },
+      { name: 'Oil Seeds', href: '/products/oil-seeds', color: '#8f6a23' },
     ],
   },
 ];
@@ -103,10 +103,10 @@ export default function Navbar() {
                 />
               </motion.div>
               <div className="flex flex-col">
-                <span className="text-2xl font-bold bg-gradient-to-r from-primary-700 via-gold-600 to-primary-500 bg-clip-text text-transparent">
+                <span className="text-2xl font-bold text-gold-600">
                   Jain Trading
                 </span>
-                <span className="text-xs bg-gradient-to-r from-gold-600 to-primary-500 bg-clip-text text-transparent -mt-1 tracking-wider">COMPANY</span>
+                <span className="text-xs text-gold-600 -mt-1 tracking-wider">COMPANY</span>
               </div>
             </Link>
 

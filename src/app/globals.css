@@ -4,18 +4,18 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --primary: 45.4 93.4% 47.5%;
-    --primary-foreground: 26 83.3% 14.1%;
-    --secondary: 142.1 76.2% 36.3%;
-    --secondary-foreground: 355.7 100% 97.3%;
-    --earth: 30 40% 50%;
-    --earth-foreground: 30 20% 98%;
+    --background: 60 33% 98%;
+    --foreground: 0 0% 17%;
+    --primary: 82 41% 30%;
+    --primary-foreground: 60 33% 98%;
+    --secondary: 37 43% 93%;
+    --secondary-foreground: 0 0% 17%;
+    --earth: 37 25% 55%;
+    --earth-foreground: 60 33% 98%;
   }
 
   * {
-    border-color: hsl(var(--border, 214.3 31.8% 91.4%));
+    border-color: hsl(var(--border, 37 30% 86%));
   }
 
   html,
@@ -26,7 +26,9 @@
   }
 
   body {
-    @apply bg-champagne-50 text-gray-900 antialiased;
+    background-color: #FAF9F6;
+    color: #2B2B2B;
+    @apply antialiased;
   }
 }
 
@@ -69,7 +71,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-600 via-gold-500 to-secondary-500 
+    @apply bg-gradient-to-r from-primary-600 via-gold-500 to-primary-700 
            bg-clip-text text-transparent;
   }
 
@@ -110,20 +112,20 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #F5EFE3;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ca8a04;
+  background: #C89B3C;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a16207;
+  background: #b08430;
 }
 
 /* Selection color */
 ::selection {
-  background-color: #eab308;
+  background-color: #C89B3C;
   color: white;
 }
