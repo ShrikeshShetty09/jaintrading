@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import ContactModal from '@/components/contact/ContactModal';
+
 import {
   Leaf,
   Shield,
@@ -170,11 +170,7 @@ const scaleIn = {
 
 export default function HomePage() {
   const heroRef = useRef(null);
-  const [isContactOpen, setIsContactOpen] = useState(false);
 
-  useEffect(() => {
-    setIsContactOpen(true);
-  }, []);
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -185,7 +181,6 @@ export default function HomePage() {
 
   return (
     <>
-      <ContactModal open={isContactOpen} onClose={() => setIsContactOpen(false)} />
       {/* Hero Section - Full Screen with Parallax */}
       <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden">
         {/* Animated Background */}
