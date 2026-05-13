@@ -22,7 +22,7 @@ const companyLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-mint-100 via-white to-emerald-50 text-gray-900 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-[#1B240B] via-[#2D3B12] to-[#1B240B] text-gray-100 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-400/15 rounded-full blur-3xl" />
@@ -53,7 +53,7 @@ export default function Footer() {
                 <span className="text-xs text-gold-600 -mt-1 tracking-wider">COMPANY</span>
               </div>
             </Link>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed">
               Manufacturer and trader of premium herbs, 
               superfoods, spices, and oil seeds. Committed to quality since 2021.
             </p>
@@ -77,7 +77,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-3 text-gray-600 hover:text-primary-600 transition-colors"
+                    className="group flex items-center gap-3 text-gray-300 hover:text-emerald-400 transition-colors"
                   >
                     <div
                       className="w-2 h-2 rounded-full group-hover:scale-150 transition-transform"
@@ -108,7 +108,7 @@ export default function Footer() {
                 >
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-3 text-gray-600 hover:text-primary-600 transition-colors"
+                    className="group flex items-center gap-3 text-gray-300 hover:text-emerald-400 transition-colors"
                   >
                     <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                     <span>{link.name}</span>
@@ -129,10 +129,10 @@ export default function Footer() {
                 whileHover={{ x: 5 }}
                 className="flex items-start gap-4 group"
               >
-                <div className="w-10 h-10 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500/30 transition-colors">
-                  <MapPin className="w-5 h-5 text-primary-400" />
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500/30 transition-colors">
+                  <MapPin className="w-5 h-5 text-emerald-400" />
                 </div>
-                <span className="text-gray-600 group-hover:text-primary-600 transition-colors">
+                <span className="text-gray-300 group-hover:text-emerald-400 transition-colors">
                   Bunglow Behind Roadways, Bus Stand, Jaroli Trade Center, 
                   Maharana Pratap Marg, Neemuch, MP 458441
                 </span>
@@ -141,10 +141,10 @@ export default function Footer() {
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-4 group"
               >
-                <div className="w-10 h-10 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500/30 transition-colors">
-                  <Phone className="w-5 h-5 text-primary-400" />
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500/30 transition-colors">
+                  <Phone className="w-5 h-5 text-emerald-400" />
                 </div>
-                <a href="tel:07440744060" className="text-gray-600 group-hover:text-primary-600 transition-colors">
+                <a href="tel:07440744060" className="text-gray-300 group-hover:text-emerald-400 transition-colors">
                   074407 44060
                 </a>
               </motion.li>
@@ -152,10 +152,10 @@ export default function Footer() {
                 whileHover={{ x: 5 }}
                 className="flex items-center gap-4 group"
               >
-                <div className="w-10 h-10 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500/30 transition-colors">
-                  <Mail className="w-5 h-5 text-primary-400" />
+                <div className="w-10 h-10 bg-emerald-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500/30 transition-colors">
+                  <Mail className="w-5 h-5 text-emerald-400" />
                 </div>
-                <a href="mailto:jaintradingcomapany1996@gmail.com" className="text-gray-600 group-hover:text-primary-600 transition-colors text-sm">
+                <a href="mailto:jaintradingcomapany1996@gmail.com" className="text-gray-300 group-hover:text-emerald-400 transition-colors text-sm">
                   jaintradingcomapany1996@gmail.com
                 </a>
               </motion.li>
@@ -165,13 +165,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-mint-200 relative z-10">
+      <div className="border-t border-white/10 relative z-10">
         <div className="container-custom py-6">
           <div className="flex flex-col items-center justify-center gap-2 text-center">
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Jain Trading Company. All rights reserved.
             </p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-500 text-sm">
               Developed by{' '}
               <a 
                 href="https://www.shridevfreelance.online/" 

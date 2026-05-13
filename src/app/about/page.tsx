@@ -145,30 +145,19 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
+        {/* Background Layer */}
+        <div className="absolute inset-0 opacity-70">
           <Image
-            src="/images/family.jpg"
+            src="/images/aboutus-bg.jpg"
             alt="About Background"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-emerald-900/70 to-primary-900/80" />
+          {/* Very subtle gradient to ensure text readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40" />
         </div>
-
-        {/* Floating Elements */}
-        <motion.div
-          animate={{ y: [0, -20, 0], rotate: [0, 5, 0] }}
-          transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-16 sm:top-20 right-8 sm:right-20 w-40 h-40 sm:w-64 sm:h-64 bg-emerald-500/20 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{ y: [0, 20, 0], rotate: [0, -5, 0] }}
-          transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-16 sm:bottom-20 left-8 sm:left-20 w-48 h-48 sm:w-80 sm:h-80 bg-primary-400/20 rounded-full blur-3xl"
-        />
 
         <div className="container-custom relative z-10 py-20">
           <motion.div
@@ -179,13 +168,13 @@ export default function AboutPage() {
           >
             <motion.h1
               variants={fadeInUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]"
             >
-              Welcome to <span className="text-gold-600">Jain Trading Company</span>
+              Welcome to <span className="text-gold-600 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">Jain Trading Company</span>
             </motion.h1>
             <motion.p
               variants={fadeInUp}
-              className="text-lg sm:text-xl md:text-2xl text-primary-100 leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
             >
               Trusted Supplier of Raw Herbs, Super Foods, Spices and Oil Seeds from Neemuch Mandi
             </motion.p>
@@ -318,6 +307,31 @@ export default function AboutPage() {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Leading Supplier of Raw <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-emerald-500 to-primary-500">Herbs and Spices</span>
               </h2>
+
+              {/* Mobile Image - Shown only on mobile/tablet */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="lg:hidden relative mb-8 aspect-square max-w-sm mx-auto"
+              >
+                <div className="absolute inset-4 border-2 border-dashed border-primary-200 rounded-full animate-[spin_30s_linear_infinite]" />
+                <div className="absolute inset-8 rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/images/family.jpg"
+                    alt="Jain Trading Company"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 via-transparent to-transparent" />
+                </div>
+                {/* Floating badge for mobile */}
+                <div className="absolute right-0 top-1/4 bg-white rounded-xl shadow-lg p-2 border border-mint-200">
+                  <div className="text-xl font-bold text-emerald-600">2021</div>
+                  <div className="text-xs text-gray-600">Established</div>
+                </div>
+              </motion.div>
+
               <p className="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed">
                 Jain Trading Company, established in 2021, is a trusted and accredited supplier providing a wide range of raw herbs, super foods, spices, and oil seeds.
                 Our products are sourced directly from farmers at the Neemuch market (Mandi Yard), allowing us to supply the best quality possible at very competitive prices.
@@ -355,12 +369,13 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
+            {/* Desktop Image - Hidden on mobile */}
             <motion.div
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: '-100px' }}
               variants={fadeInRight}
-              className="relative mt-8 lg:mt-0"
+              className="hidden lg:block relative"
             >
               <div className="relative aspect-square max-w-sm mx-auto lg:max-w-none">
                 {/* Decorative rings */}

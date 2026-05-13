@@ -224,12 +224,12 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="container-custom relative z-10 py-12 sm:py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-4xl mx-auto">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
-              className="text-white text-center lg:text-left"
+              className="text-white text-center"
             >
               <motion.h1
                 variants={fadeInUp}
@@ -245,13 +245,13 @@ export default function HomePage() {
 
               <motion.p
                 variants={fadeInUp}
-                className="text-lg md:text-2xl text-primary-100 mb-8 leading-relaxed max-w-xl"
+                className="text-lg md:text-2xl text-primary-100 mb-8 leading-relaxed max-w-2xl mx-auto"
               >
                 Committed to Quality, Committed to Customers. Premium herbs, superfoods, 
                 spices, and oil seeds from the heart of India.
               </motion.p>
 
-              <motion.div variants={fadeInUp} className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-12">
+              <motion.div variants={fadeInUp} className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12">
                 <Link
                   href="/products"
                   className="group inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-emerald-500 text-white font-semibold rounded-full hover:bg-emerald-600 transition-all duration-300 hover:shadow-lg hover:shadow-emerald-500/25 text-sm sm:text-base"
@@ -271,7 +271,7 @@ export default function HomePage() {
               {/* Stats */}
               <motion.div
                 variants={fadeInUp}
-                className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -287,70 +287,6 @@ export default function HomePage() {
                   </motion.div>
                 ))}
               </motion.div>
-            </motion.div>
-
-            {/* Hero Image - Hidden on Mobile to show more background */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="hidden lg:block relative mt-8 lg:mt-0 overflow-hidden"
-            >
-              <div className="relative w-full aspect-square max-w-sm mx-auto lg:max-w-lg">
-                {/* Decorative rings */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-                  className="absolute inset-0 border-2 border-dashed border-emerald-400/30 rounded-full"
-                />
-                <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 40, repeat: Infinity, ease: 'linear' }}
-                  className="absolute inset-4 border-2 border-dashed border-mint-400/30 rounded-full"
-                />
-
-                {/* Main Image */}
-                <div className="absolute inset-6 sm:inset-8 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src="/images/family.jpg"
-                    alt="Natural Herbs and Spices"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent" />
-                </div>
-
-                {/* Floating badges */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.8 }}
-                  className="absolute right-0 sm:-right-4 top-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4 flex items-center gap-2 sm:gap-3 border border-mint-200"
-                >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-100 to-mint-100 rounded-lg sm:rounded-xl flex items-center justify-center">
-                    <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-emerald-600" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-900 text-sm sm:text-base">100% Natural</div>
-                    <div className="text-xs sm:text-sm text-gray-500">Quality Assured</div>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 1 }}
-                  className="absolute left-0 sm:-left-4 bottom-1/4 bg-white rounded-xl sm:rounded-2xl shadow-xl p-3 sm:p-4"
-                >
-                  <div className="flex items-center gap-1 sm:gap-2 mb-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-emerald-400 text-emerald-400" />
-                    ))}
-                  </div>
-                  <div className="font-bold text-gray-900 text-sm sm:text-base">100+ Happy Clients</div>
-                </motion.div>
-              </div>
             </motion.div>
           </div>
         </div>
